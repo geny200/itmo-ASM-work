@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <time.h> 
 #include <random>
+#include <iostream>
 
 #ifdef _M_IX86 
 std::mt19937 mersene(123);
@@ -10,6 +11,8 @@ extern "C" void     _cdecl fact(int32_t);
 extern "C" double   _cdecl arctang(float, uint32_t);
 extern "C" int8_t   _cdecl min_ubytes(int8_t*, uint32_t);
 extern "C" int8_t   _cdecl max_sbytes(int8_t*, uint32_t);
+extern "C" void     _cdecl test_hex(char* out_buf, const char* format, const char* hex_number);
+extern "C" void     _cdecl hex_print(char* out_buf, const char* format, const char* hex_number);
 
 void task_factorial() {
     fact(7);
@@ -73,6 +76,13 @@ void task_max_sign() {
     printf("number: %d\n my - ms: \t%f\n naive - ms: \t%f", (int)result, (double)(end1 - start), (double)(end2 - end1));
     return;
 }
+
+void task_hec_to_dec() {
+    char buff1[100]{ 0 };
+    hex_print(buff1, buff1, "123456789123456789");
+    std::cout << "out: |" << buff1 << "|";
+    //test_hex(buff1, "", "123456789123456789"); // 562046894926727218533
+}
 #endif
 
 void x86_tasks() {
@@ -87,6 +97,9 @@ void x86_tasks() {
 
     printf("\nmax(unsign):\n");
     task_max();
+
+    printf("\nhec_to_dec:\n");
+    task_hec_to_dec();
     printf("\nend_x86_tasks\n");
 #else
     printf("x86_tasks - _M_IX86 doesn't defined\n");
