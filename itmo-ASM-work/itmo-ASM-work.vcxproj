@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CustomPrint.h" />
+    <ClInclude Include="ModeHead.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="arctang.asm">
@@ -155,6 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RunAsm.cpp" />
+    <ClCompile Include="x64_tasks.cpp" />
+    <ClCompile Include="x86_tasks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="min.asm">
@@ -172,6 +175,17 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">min_sign.obj</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   min_sign.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">min_sign.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="strlen.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\nasm\nasm.exe -f win64 strlen.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">strlen.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

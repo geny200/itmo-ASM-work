@@ -18,9 +18,18 @@
     <ClInclude Include="CustomPrint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModeHead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RunAsm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x64_tasks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_tasks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,13 +40,14 @@
     <CustomBuild Include="factorial.asm">
       <Filter>Source Files</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="min.asm">
+    <CustomBuild Include="min.asm">
       <Filter>Source Files</Filter>
-    </None>
-    <None Include="min_sign.asm">
+    </CustomBuild>
+    <CustomBuild Include="min_sign.asm">
       <Filter>Source Files</Filter>
-    </None>
+    </CustomBuild>
+    <CustomBuild Include="strlen.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
