@@ -50,4 +50,12 @@
       <Filter>Source Files</Filter>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="hex_print.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="test_hex.asm">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
