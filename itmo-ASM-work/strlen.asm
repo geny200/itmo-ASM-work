@@ -1,11 +1,10 @@
 global my_strlen	
 
-
 section .code
 my_strlen:
   xorps  xmm1, xmm1
   mov    rax, rcx
-  mov    rbx, rcx
+  mov    rdx, rcx
   sub    rax, 16
 loop:
   add    rax, 16
@@ -13,6 +12,5 @@ loop:
   jnz    loop
 
   add    rax, rcx
-  sub    rax, rbx
+  sub    rax, rdx
   ret
-

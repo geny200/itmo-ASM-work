@@ -147,11 +147,15 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   arctang.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">arctang.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   arctang.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">arctang.obj</Outputs>
     </CustomBuild>
     <CustomBuild Include="factorial.asm">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   factorial.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">factorial.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   factorial.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">factorial.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -169,12 +173,12 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="min_sign.asm">
+    <CustomBuild Include="max_signed.asm">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   min_sign.asm</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">min_sign.obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   min_sign.asm</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">min_sign.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   max_signed.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">max_signed.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   max_signed.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">max_signed.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +190,8 @@
       </Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\nasm\nasm.exe -f win64 strlen.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">strlen.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\nasm\nasm.exe -f win64 strlen.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">strlen.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +199,8 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   hex_print.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hex_print.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   hex_print.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hex_print.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +208,17 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\nasm\nasm.exe   -f win32   test_hex.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">test_hex.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\nasm\nasm.exe   -f win32   test_hex.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">test_hex.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="double_to_string.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\nasm\nasm.exe -f win64 double_to_string.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">double_to_string.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\nasm\nasm.exe -f win64 double_to_string.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">double_to_string.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,4 @@
-global	_hex_print
+global	_print
 
 section .data
 tmp_num:	dd 0, 0, 0, 0, 0, 0, 0, 0
@@ -11,7 +11,7 @@ tmp_str:	resb 32
 
 section .code
 
-_hex_print:
+_print:
 	pushad
 	mov		byte [sign], 0
 	mov		byte [filler], ' '
@@ -265,6 +265,7 @@ print_right_num:
 	xchg	ebp, ecx
 	call	print_fill
 	xchg	ebp, ecx
+
 print_right_num_num:
 	call	print_num
 	jmp		exit
@@ -273,6 +274,7 @@ print_right_num_sp:
 	cmp		byte [sign], 0
 	jz		print_right_num_sp_s
 	mov		eax, 1
+
 print_right_num_sp_s:
 	or		al, bl
 	sub		ebp, eax
@@ -293,7 +295,6 @@ print_right_num_sp_prefix:
 
 	
 print_num:
-	
 	;ecx - lenght
 	mov		al, byte [esi + ecx - 1] 
 	mov		byte [edi], al
@@ -337,7 +338,6 @@ print_sp:
 	inc		eax
 skip_sp:
 	ret
-
 
 exit:
 	popad

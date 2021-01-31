@@ -43,19 +43,20 @@
     <CustomBuild Include="min.asm">
       <Filter>Source Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="min_sign.asm">
-      <Filter>Source Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="strlen.asm">
       <Filter>Source Files</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="hex_print.asm">
+    <CustomBuild Include="hex_print.asm">
       <Filter>Source Files</Filter>
-    </None>
-    <None Include="test_hex.asm">
+    </CustomBuild>
+    <CustomBuild Include="test_hex.asm">
       <Filter>Source Files</Filter>
-    </None>
+    </CustomBuild>
+    <CustomBuild Include="double_to_string.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="max_signed.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
