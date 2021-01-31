@@ -1,15 +1,10 @@
 #include "CustomPrint.h"
-#include <cassert>
 #include <stdint.h>
 #include <time.h> 
 #include <string>
 #include <iostream>
 #include <vector>
 #include <random>
-
-
-
-
 
 #ifdef _M_X64
 std::mt19937 generator(123);
